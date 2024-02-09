@@ -17,7 +17,7 @@ class _AppState extends State<App> {
     super.initState();
 
     Future.delayed(const Duration(milliseconds: 5000), () {
-      Get.toNamed(AppRoutes.dashboard);
+      Get.offAllNamed(AppRoutes.login);
     });
   }
 

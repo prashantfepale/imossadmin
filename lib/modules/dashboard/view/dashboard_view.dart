@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../shared/routes/app_routes.dart';
+import '../../../shared/widget/bottom_navigation.dart';
 import '../controller/dashboard_controller.dart';
 
 class DashboardView extends GetView<DashboardController> {
@@ -16,31 +16,7 @@ class DashboardView extends GetView<DashboardController> {
       body: const Center(
         child: Text("Dashboard"),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        elevation: 2,
-        onTap: (value) {
-          if(value == 1) {
-            Get.toNamed(AppRoutes.notifications);
-          }
-          if(value == 2) {
-            Get.toNamed(AppRoutes.notifications);
-          }
-        },
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.dashboard),
-            label: 'Dashboard',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
-            label: 'Notification',
-          ),
-        ],
-      ),
+      bottomNavigationBar: customBottomNavigation(),
     );
   }
 }

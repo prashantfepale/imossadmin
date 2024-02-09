@@ -11,5 +11,5 @@ abstract class AppColors {
   static const Color opacityColor = Color(0xFF203E47);
 
   static const Color white = Color(0xFFFFFFFF);
-
+  static const Color boxShadowColor = Color(0xFFF0F0F0);
 }

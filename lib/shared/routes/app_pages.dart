@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 import 'package:imossadmin/modules/dashboard/view/dashboard_view.dart';
+import 'package:imossadmin/modules/login/binding/login_binding.dart';
+import 'package:imossadmin/modules/login/view/login.dart';
 import 'package:imossadmin/modules/notifications/bindings/notifications_binding.dart';
 
 import '../../modules/app/binding/app_binding.dart';
@@ -25,6 +27,11 @@ class AppPages {
       name: AppRoutes.dashboard,
       page: () => const DashboardView(),
       binding: AppBinding(),
-    )
+    ),
+    GetPage(
+      name: AppRoutes.login,
+      page: () => const LoginView(),
+      binding: LoginBinding(),
+    ),
   ];
 }
