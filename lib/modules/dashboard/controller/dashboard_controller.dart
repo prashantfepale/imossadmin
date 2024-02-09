@@ -7,7 +7,7 @@ class DashboardController extends GetxController {
   final DashboardProvider dashboardProvider = Get.put(DashboardProvider());
 
   RxBool isDataLoaded = false.obs;
-  List<PostReponse> posts = [];
+  List<PostReponse>? listOfPost;
   PostReponse? singlePost;
 
   @override
@@ -19,7 +19,7 @@ class DashboardController extends GetxController {
   getDashboardData() async {
     await dashboardProvider.getAllPost(
       onSuccess: (List<PostReponse> posts) {
-        posts = posts;
+        listOfPost = posts;
         isDataLoaded(true);
       },
       onFailed: (error) {},
