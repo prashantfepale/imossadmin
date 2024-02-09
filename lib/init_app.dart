@@ -40,7 +40,7 @@ class InitApp extends StatelessWidget {
           ),
           useMaterial3: true,
         ),
-        initialRoute: AppRoutes.LOGIN,
+        initialRoute: AppRoutes.APP,
         getPages: AppPages.routes,
       ),
     );
