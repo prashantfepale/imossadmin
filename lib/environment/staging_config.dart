@@ -9,7 +9,7 @@ class StagingConfig implements BaseConfig {
   String get env => Environment.STAGING;
 
   @override
-  String get baseurl => '';
+  String get baseurl => 'https://jsonplaceholder.typicode.com';
 
   @override
   String get defaultToken => '';

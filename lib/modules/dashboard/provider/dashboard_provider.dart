@@ -13,7 +13,7 @@ class DashboardProvider extends GetConnect {
     required Function(List<PostReponse> postList) onSuccess,
     required Function(String? error) onFailed,
   }) async {
-    String resourceUrl = "https://jsonplaceholder.typicode.com/posts";
+    String resourceUrl = "$baseurl/posts";
     final response = await get(resourceUrl);
     
     var responseBody = response.body;
@@ -32,7 +32,7 @@ class DashboardProvider extends GetConnect {
     required Function(PostReponse post) onSuccess,
     required Function(String? error) onFailed,
   }) async {
-    String resourceUrl = "https://jsonplaceholder.typicode.com/todos/1";
+    String resourceUrl = "$baseurl/todos/1";
     final response = await get(resourceUrl);
     
     var responseBody = response.body;
