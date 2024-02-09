@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:imossadmin/shared/style/app_colors.dart';
 
 import '../../../shared/routes/app_routes.dart';
 
@@ -15,15 +16,19 @@ class _AppState extends State<App> {
   void initState() {
     super.initState();
 
-    Future.delayed(const Duration(milliseconds: 10000), () {
-      Get.toNamed(AppRoutes.LOGIN);
+    Future.delayed(const Duration(milliseconds: 5000), () {
+      Get.toNamed(AppRoutes.dashboard);
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("Loading..."),
+    return const Scaffold(
+      body: Center(
+        child: CircularProgressIndicator(
+          color: AppColors.primary1,
+        ),
+      ),
     );
   }
 }
